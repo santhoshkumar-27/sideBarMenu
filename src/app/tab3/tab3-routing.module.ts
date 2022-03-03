@@ -1,0 +1,31 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { Tab3Page } from './tab3.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: Tab3Page,
+    children: [
+      {
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then( m => m.LoginPageModule)
+      },
+      {
+        path: 'logout',
+        loadChildren: () => import('../logout/logout.module').then( m => m.LogoutPageModule)
+      },
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full'
+      }
+    ]
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class Tab3PageRoutingModule {}

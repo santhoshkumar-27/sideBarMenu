@@ -1,0 +1,7 @@
+{
+  "name": "academyMenus",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

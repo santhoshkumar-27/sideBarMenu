@@ -1,0 +1,26 @@
+<ion-split-pane contentId="second-menu" [disabled]="!enablePane">
+  <ion-menu side="start" contentId="second-menu" menuId="second">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu 2</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" menu="second">
+          <ion-item routerLink="/tabs/tab2/user" routerDirection="root" routerLinkActive="active-item">
+            <ion-label>
+              user
+            </ion-label>
+          </ion-item>
+          <ion-item routerLink="/tabs/tab2/account" routerDirection="root" routerLinkActive="active-item">
+            <ion-label>
+              accounts
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="second-menu"></ion-router-outlet>
+</ion-split-pane>
